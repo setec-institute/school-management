@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class SchoolController {
 
-    @GetMapping("/")
+    @GetMapping("/admin")
     public String index(){
-        return "index";
+        return "admin/index";
     }
 
     @GetMapping("/tables")
