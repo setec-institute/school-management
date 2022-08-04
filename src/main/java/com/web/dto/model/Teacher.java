@@ -1,4 +1,4 @@
-package com.web.entity;
+package com.web.dto.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

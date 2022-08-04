@@ -1,24 +1,19 @@
 package com.web.controller;
 
-import com.web.dto.TeacherDto;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import com.web.entity.User;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 
-@RestController
+@Controller
 public class SchoolController {
-
-
-
 
     @GetMapping("/admin")
     public String index(){
 
-
-        
         return "admin/index";
     }
 
@@ -28,15 +23,33 @@ public class SchoolController {
     }
 
     @GetMapping("/login")
-    public String loginPage(){
-        return "login";
+    public String loginPage(Model model){
+
+        User user = new User();
+        model.addAttribute("user", user);
+
+        return "admin/login";
+    }
+    @PostMapping("/login")
+    public String showPage(@ModelAttribute("user") User user){
+
+        String username = user.getUsername();
+        String password = user.getPassword();
+
+        System.out.println(username.getClass().getName());
+        System.out.println(password.getClass().getName());
+
+        if ("bunhor".equals(username)){
+            return "redirect:admin";
+        }else {
+            return "error";
+        }
     }
 
     @GetMapping("/schedule")
     public String calendarPage(){
         return "tableSchedule";
     }
-
 
 
 }

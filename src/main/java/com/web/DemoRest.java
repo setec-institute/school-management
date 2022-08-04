@@ -49,31 +49,25 @@ public class DemoRest {
 
 
 
-    @PostConstruct
-    public void consumeFromPython(){
-
-        RestTemplate restTemplate = new RestTemplate();
-
-        var url = "http://localhost:5000/allTeacher";
-
-        ResponseEntity<TeacherDto> responseEntity = restTemplate.getForEntity(url, TeacherDto.class);
-        responseEntity.getBody();
-
-
-
-
-
-
-
-
-        if(responseEntity.getStatusCodeValue() == 200){
-            System.out.println("Response : " + responseEntity.getStatusCodeValue());
-            TeacherDto t = new TeacherDto();
-            t.setCode(Objects.requireNonNull(responseEntity.getBody()).getCode());
-            t.setMessage(responseEntity.getBody().getMessage());
-            System.out.println("teacher : " + t.getCode());
-        }
-
-    }
+//    @PostConstruct
+//    public void consumeFromPython(){
+//
+//        RestTemplate restTemplate = new RestTemplate();
+//
+//        var url = "http://192.168.76.133:5000/allTeacher";
+//
+//        ResponseEntity<TeacherDto> responseEntity = restTemplate.getForEntity(url, TeacherDto.class);
+//        responseEntity.getBody();
+//
+//
+//        if(responseEntity.getStatusCodeValue() == 200){
+//            System.out.println("Response : " + responseEntity.getStatusCodeValue());
+//            TeacherDto t = new TeacherDto();
+//            t.setCode(Objects.requireNonNull(responseEntity.getBody()).getCode());
+//            t.setMessage(responseEntity.getBody().getMessage());
+//            System.out.println("teacher : " + t.getCode());
+//        }
+//
+//    }
 
 }
