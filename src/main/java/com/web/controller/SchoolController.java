@@ -1,6 +1,6 @@
 package com.web.controller;
 
-import com.web.entity.User;
+import com.web.users.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class SchoolController {
 
     @GetMapping("/admin")
-    public String index(){
-
+    public String index(Model model){
+        Boolean pageName = true;
+        model.addAttribute("pageName", pageName);
         return "admin/index";
     }
 

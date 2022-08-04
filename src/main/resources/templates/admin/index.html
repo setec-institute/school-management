@@ -14,11 +14,17 @@
     <div th:replace="admin/mainpages/navbar"> </div>
     <!-- End Navbar -->
 
+
+
     <!--Top container menu-->
-    <div th:replace="admin/mainpages/topContainerMenu"> </div>
+    <div th:if="${pageName}">
+      <div th:replace="admin/mainpages/topContainerMenu"> </div>
+    </div>
     <!--End Top container menu-->
 
-    <div th:replace="admin/mainpages/content"> </div>
+    <div th:switch="${page}">
+      <div th:case="'teacher'" th:replace="admin/pages/users/teacher"> </div>
+    </div>
 
 
   </main>
