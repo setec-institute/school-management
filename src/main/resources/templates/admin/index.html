@@ -23,7 +23,17 @@
     <!--End Top container menu-->
 
     <div th:switch="${page}">
-      <div th:case="'teacher'" th:replace="admin/pages/users/teacher"> </div>
+
+      <div th:case="'user'">
+        <div th:replace="admin/pages/users/user"> </div>
+      </div>
+      <div th:case="'teacher'">
+        <div th:replace="admin/pages/users/teacher"> </div>
+      </div>
+      <div th:case="'student'">
+        <div th:replace="admin/pages/users/student"> </div>
+      </div>
+
     </div>
 
 

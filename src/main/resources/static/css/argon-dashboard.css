@@ -26611,4 +26611,12 @@ pre[class*="language-"] {
   }
 }
 
+
+
+
+.dropdown-menu[data-bs-popper]{
+    margin-top: 0px;
+}
+
+
 /*# sourceMappingURL=dashboard-free.css.map */

@@ -1,31 +1,26 @@
 package com.web.users.controller;
 
 import com.web.users.service.TeacherService;
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class TeacherController {
+public class UserController {
 
-    @Autowired
-    TeacherService teacherService;
-
-    @GetMapping("/teacher")
+    @GetMapping("/user")
     public String show(Model model){
 
-        String page = "teacher";
+        String page = "user";
         /*Todo:
             - get list of teacher
          */
-        teacherService.getAllTeachers();
         model.addAttribute("page", page);
         return "admin/index";
     }
 
-    @GetMapping("/teachers")
+    @GetMapping("/users")
     public String getAllTeachers(){
 
         return "";

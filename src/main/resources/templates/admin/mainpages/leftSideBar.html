@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse  w-auto "  id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="./pages/dashboard.html">
+                <a class="nav-link active" href="/admin">
                     <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
                     </div>
@@ -34,14 +34,18 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="./pages/virtual-reality.html">
-                    <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                    <div class="icon icon-shape icon-sm border-radius-md text-center  d-flex align-items-center justify-content-center">
                         <i class="ni ni-circle-08 text-info text-sm opacity-10"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Users</span>
+                    <span class="nav-link-text ms-1">Users Management</span>
                 </a>
+                <ul class="dropdown-menu border-radius-md align-items-center pt-0 pb-0 justify-content-center" style="padding-left: 25%;">
+                    <li><a class="dropdown-item " href="/user"> User </a></li>
+                    <li><a class="dropdown-item " href="/teacher"> Teacher </a></li>
+                    <li><a class="dropdown-item " href="/student"> Student </a></li>
+                </ul>
             </li>
-
         </ul>
     </div>
 </aside>

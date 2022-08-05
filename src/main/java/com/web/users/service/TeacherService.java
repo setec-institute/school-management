@@ -18,12 +18,12 @@ import java.util.List;
 public class TeacherService {
 
     public List<Teacher> getAllTeachers(){
-        RestTemplate restTemplate = new RestTemplate();
-
-        String uri = "http://127.0.0.1:5000/allTeacher";
-
-        ResponseEntity<TeacherDto> responseEntity = restTemplate.getForEntity(uri, TeacherDto.class);
-        responseEntity.getBody();
+//        RestTemplate restTemplate = new RestTemplate();
+//
+//        String uri = "http://127.0.0.1:5000/allTeacher";
+//
+//        ResponseEntity<TeacherDto> responseEntity = restTemplate.getForEntity(uri, TeacherDto.class);
+//        responseEntity.getBody();
 
         return new ArrayList<>();
     }
