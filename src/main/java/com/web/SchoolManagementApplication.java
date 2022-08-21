@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.logging.Logger;
+
 @SpringBootApplication
 public class SchoolManagementApplication {
 
@@ -16,4 +18,5 @@ public class SchoolManagementApplication {
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
+
 }

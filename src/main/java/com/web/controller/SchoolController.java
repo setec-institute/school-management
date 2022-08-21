@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class SchoolController {
 
+
+    @GetMapping("/")
+    public String home(){
+        return "frontend/homepage";
+    }
+
     @GetMapping("/admin")
     public String index(Model model){
         Boolean pageName = true;

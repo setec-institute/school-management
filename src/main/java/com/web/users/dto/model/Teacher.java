@@ -14,7 +14,7 @@ import java.util.Date;
 public class Teacher {
 
     @JsonProperty("teacher_id")
-    private Integer teacherId;
+    private String teacherId;
     @JsonProperty("teacher_name")
     private String teacherName;
     private String gender;

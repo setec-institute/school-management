@@ -1,89 +1,40 @@
 
-<nav class="navbar-main navbar-expand-lg mx-4 shadow-none border-radius-xl bg-success p-2 mw-100" id="navbarBlur" data-scroll="true">
+<nav class="navbar-main mx-4 shadow-none">
+    <button class="btn btn-sm btn-outline-success"><a href="/add-teacher"><i class="ni ni-fat-add fs-6 text-success" ></i></a></button>
+</nav>
+<nav class="navbar-main navbar-expand-lg mx-4 shadow-none border-radius-xl bg-success p-2 mw-100" id="navbarBlur"
+     data-scroll="true" xmlns:th="http://www.w3.org/1999/xhtml">
 
     <h3>Teacher Listing</h3>
 
     <table class="table  table-hover table-info mt-4 border-radius-xl" >
         <thead>
         <tr>
-            <th scope="col">No</th>
-            <th scope="col">Name</th>
-            <th scope="col">Degree</th>
-            <th scope="col">Address</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Email</th>
-            <th scope="col">Status</th>
-<!--            <th scope="col">Create</th>-->
-<!--            <th scope="col">Create Date</th>-->
-<!--            <th scope="col">Update</th>-->
-<!--            <th scope="col">Update Date</th>-->
+            <td scope="col">No</td>
+            <td scope="col">Name</td>
+            <td scope="col">Degree</td>
+            <td scope="col">Address</td>
+            <td scope="col">Phone</td>
+            <td scope="col">Email</td>
+            <td scope="col">Status</td>
+            <td scope="col">Action</td>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-<!--            <td>@mdo</td>-->
-<!--            <td>@mdo</td>-->
-<!--            <td>@mdo</td>-->
-<!--            <td>@mdo</td>-->
-        </tr>
-        <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-        </tr>
-        <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-        </tr>
-        <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-        </tr>
-        <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
-            <!--            <td>@mdo</td>-->
+        <tr th:each="teacher : ${teachers}">
+            <td><spand th:text="${teacher.teacherId}"></spand></td>
+            <td><spand th:text="${teacher.teacherName}"></spand></td>
+            <td><spand th:text="${teacher.degreeName}"></spand></td>
+            <td><spand th:text="${teacher.currentAddress}"></spand></td>
+            <td><spand th:text="${teacher.phone}"></spand></td>
+            <td><spand th:text="${teacher.email}"></spand></td>
+            <td><spand th:text="${teacher.status}"></spand></td>
+            <td>
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-sm btn-primary m-0" type="button"><i class="ni ni-ruler-pencil"></i></button>
+                    <button class="btn btn-danger btn-sm m-0" type="button"><i class="ni ni-fat-remove"></i></button>
+                </div>
+            </td>
         </tr>
         </tbody>
     </table>
